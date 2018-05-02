@@ -74,7 +74,7 @@ let price = marsHabitatPricerOutput.price
 priceLabel.text = priceFormatter.string(for: price)
 ```
 
-- Note: The generated `prediction(solarPanels:greenhouses:size:)` method can throw an error. The most common type of error you’ll encounter when working with Core ML occur when the details of the input data don't match the details the model is expecting—for example, an image in the wrong format. 
+- Note: The generated `prediction(solarPanels:greenhouses:size:)` method can throw an error. The most common type of error you’ll encounter when working with Core ML occurs when the details of the input data don't match the details the model is expecting—for example, an image in the wrong format. 
 
 ## Build and Run a Core ML App 
 
