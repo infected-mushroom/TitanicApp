@@ -16,12 +16,9 @@ navigator.
 You can see information about the model—including 
 the model type and its expected inputs and outputs—by 
 opening the model in Xcode. 
-The inputs to the 
-model are the number of solar panels and greenhouses, as well 
+In this sample, the inputs are the number of solar panels and greenhouses, as well 
 as the lot size of the habitat (in acres). 
-The output of the model is the predicted price of the habitat.
-
-![Xcode screenshot of a properly processed Core ML model](Documentation/XcodeCoreMLModel.png)
+The output is the predicted price of the habitat.
 
 ## Create the Model in Code
 
