@@ -17,6 +17,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     private let solarPanelsDataSource = SolarPanelDataSource()
     private let greenhousesDataSource = GreenhousesDataSource()
     private let sizeDataSource = SizeDataSource()
+    private let ageDataSource = AgeDataSource()
     
     // MARK: - Helpers
     
@@ -26,6 +27,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         case .solarPanels:  return solarPanelsDataSource.title(for: row)
         case .greenhouses:  return greenhousesDataSource.title(for: row)
         case .size:         return sizeDataSource.title(for: row)
+        case .age:          return ageDataSource.title(for: row)
         }
     }
     
@@ -37,6 +39,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         case .solarPanels:      value = solarPanelsDataSource.value(for: row)
         case .greenhouses:      value = greenhousesDataSource.value(for: row)
         case .size:             value = sizeDataSource.value(for: row)
+        case .age:              value = ageDataSource.value(for: row)
         }
         
         return value!
@@ -46,7 +49,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
     /// Hardcoded 3 items in the picker.
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 3
+        return 4
     }
     
     /// Find the count of each column of the picker.
@@ -55,6 +58,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         case .solarPanels:  return solarPanelsDataSource.values.count
         case .greenhouses:  return greenhousesDataSource.values.count
         case .size:         return sizeDataSource.values.count
+        case .age:          return ageDataSource.values.count
         }
     }
 }

@@ -12,7 +12,8 @@ import CoreML
 class ViewController: UIViewController {
     // MARK: - Properties
     
-    let model = MarsHabitatPricer()
+    // let model = MarsHabitatPricer()
+    let model = titanic_()
     
     /// Data source for the picker.
     let pickerDataSource = PickerDataSource()
@@ -20,10 +21,10 @@ class ViewController: UIViewController {
     /// Formatter for the output.
     let priceFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
+        formatter.numberStyle = .decimal
         formatter.maximumFractionDigits = 0
         formatter.usesGroupingSeparator = true
-        formatter.locale = Locale(identifier: "en_US")
+        // formatter.locale = Locale(identifier: "en_US")
         return formatter
     }()
     
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
             pickerView.delegate = self
             pickerView.dataSource = pickerDataSource
 
-            let features: [Feature] = [.solarPanels, .greenhouses, .size]
+            let features: [Feature] = [.solarPanels, .greenhouses, .size, .age]
             for feature in features {
                 pickerView.selectRow(2, inComponent: feature.rawValue, animated: false)
             }
@@ -70,12 +71,25 @@ class ViewController: UIViewController {
         let solarPanels = pickerDataSource.value(for: selectedRow(for: .solarPanels), feature: .solarPanels)
         let greenhouses = pickerDataSource.value(for: selectedRow(for: .greenhouses), feature: .greenhouses)
         let size = pickerDataSource.value(for: selectedRow(for: .size), feature: .size)
+        //let age = pickerDataSource.value(for: selectedRow(for: .size), feature: .size)
 
-        guard let marsHabitatPricerOutput = try? model.prediction(solarPanels: solarPanels, greenhouses: greenhouses, size: size) else {
+        //guard let marsHabitatPricerOutput = try? model.prediction(solarPanels: solarPanels, greenhouses: greenhouses, size: size) else {
+            //fatalError("Unexpected runtime error.")
+        //}
+        let age = 22.0
+        let fare = 7.2500
+        let pclass = "3"
+        let sex = "male"
+        let sibsp = "1"
+        let parch = "0"
+        let cabin = "NAN"
+        let embarked = "S"
+        guard let titanicOutput = try? model.prediction(feature_3: age, feature_6: fare, feature_1: pclass, feature_2: sex, feature_4: sibsp, feature_5: parch, feature_7: cabin, feature_8: embarked) else {
             fatalError("Unexpected runtime error.")
         }
 
-        let price = marsHabitatPricerOutput.price
-        priceLabel.text = priceFormatter.string(for: price)
+        //let price = marsHabitatPricerOutput.price
+        priceLabel.text = priceFormatter.string(for: titanicOutput.prediction[0].doubleValue)
+        //priceLabel.text = priceFormatter.string(for: price)
     }
 }

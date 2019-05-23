@@ -13,5 +13,5 @@ import UIKit
      model. So each needs an appropriate `UIPicker` as well.
 */
 enum Feature: Int {
-    case solarPanels = 0, greenhouses, size
+    case solarPanels = 0, greenhouses, size, age
 }
