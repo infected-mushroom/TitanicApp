@@ -19,9 +19,9 @@
 		14A8A1541EB15C0E00263F76 /* SizeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A8A1531EB15C0E00263F76 /* SizeDataSource.swift */; };
 		14F3A3BD1EB2C5ED004FA86D /* ViewController+PickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F3A3BC1EB2C5ED004FA86D /* ViewController+PickerViewDelegate.swift */; };
 		5E3FB1781EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E3FB1771EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel */; };
-		CEB68A3E229563E300E662AC /* iris.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A3D229563E200E662AC /* iris.mlmodel */; };
+		92B541A82296D81000E353A2 /* titanic_.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A452296AB0100E662AC /* titanic_.mlmodel */; };
+		92B541A92296D81B00E353A2 /* iris.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A3F229563E900E662AC /* iris.mlmodel */; };
 		CEB68A422295811700E662AC /* SexDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A412295811700E662AC /* SexDataSource.swift */; };
-		CEB68A44229592F900E662AC /* titanic_new.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A43229592F900E662AC /* titanic_new.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,10 +40,8 @@
 		14A8A1531EB15C0E00263F76 /* SizeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeDataSource.swift; sourceTree = "<group>"; };
 		14F3A3BC1EB2C5ED004FA86D /* ViewController+PickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+PickerViewDelegate.swift"; sourceTree = "<group>"; };
 		5E3FB1771EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MarsHabitatPricer.mlmodel; sourceTree = "<group>"; };
-		CEB68A3D229563E200E662AC /* iris.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = iris.mlmodel; sourceTree = "<group>"; };
 		CEB68A3F229563E900E662AC /* iris.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = iris.mlmodel; path = ../../MarsHabitatPricePredictor.xcodeproj/iris.mlmodel; sourceTree = "<group>"; };
-		CEB68A412295811700E662AC /* SexDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SexDataSource.swift; path = MarsHabitatPricePredictor.xcodeproj/../SexDataSource.swift; sourceTree = SOURCE_ROOT; };
-		CEB68A43229592F900E662AC /* titanic_new.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = titanic_new.mlmodel; path = "../Data Sources/titanic_new.mlmodel"; sourceTree = "<group>"; };
+		CEB68A412295811700E662AC /* SexDataSource.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = SexDataSource.swift; path = "MarsHabitatPricePredictor/Data Sources/SexDataSource.swift"; sourceTree = SOURCE_ROOT; };
 		CEB68A452296AB0100E662AC /* titanic_.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = titanic_.mlmodel; path = ../../MarsHabitatPricePredictor.xcodeproj/titanic_.mlmodel; sourceTree = "<group>"; };
 		F8C3E880F8C3E6F000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		F8D773F0F8D4A75000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 				1405CF371EB15517009DDFA4 /* AppDelegate.swift */,
 				141947F21EB2A1F900D03315 /* Feature.swift */,
 				1405CF391EB15517009DDFA4 /* ViewController.swift */,
-				CEB68A3D229563E200E662AC /* iris.mlmodel */,
 				14F3A3BC1EB2C5ED004FA86D /* ViewController+PickerViewDelegate.swift */,
 				14A8A1551EB15C1C00263F76 /* Data Sources */,
 				1405CF491EB15546009DDFA4 /* Resources */,
@@ -99,7 +96,6 @@
 				5E3FB1771EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel */,
 				CEB68A452296AB0100E662AC /* titanic_.mlmodel */,
 				CEB68A3F229563E900E662AC /* iris.mlmodel */,
-				CEB68A43229592F900E662AC /* titanic_new.mlmodel */,
 				1405CF3B1EB15517009DDFA4 /* Main.storyboard */,
 				1405CF3E1EB15517009DDFA4 /* Assets.xcassets */,
 				1405CF401EB15517009DDFA4 /* LaunchScreen.storyboard */,
@@ -212,12 +208,12 @@
 				1405CF3A1EB15517009DDFA4 /* ViewController.swift in Sources */,
 				CEB68A422295811700E662AC /* SexDataSource.swift in Sources */,
 				14F3A3BD1EB2C5ED004FA86D /* ViewController+PickerViewDelegate.swift in Sources */,
+				92B541A92296D81B00E353A2 /* iris.mlmodel in Sources */,
 				14A8A1541EB15C0E00263F76 /* SizeDataSource.swift in Sources */,
-				CEB68A44229592F900E662AC /* titanic_new.mlmodel in Sources */,
-				CEB68A3E229563E300E662AC /* iris.mlmodel in Sources */,
 				14A8A1521EB15BF900263F76 /* GreenhousesDataSource.swift in Sources */,
 				141947F31EB2A1F900D03315 /* Feature.swift in Sources */,
 				14A8A1501EB15BE800263F76 /* SolarPanelDataSource.swift in Sources */,
+				92B541A82296D81000E353A2 /* titanic_.mlmodel in Sources */,
 				14A8A14E1EB15BD500263F76 /* PickerViewDataSource.swift in Sources */,
 				5E3FB1781EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel in Sources */,
 				1405CF381EB15517009DDFA4 /* AppDelegate.swift in Sources */,
@@ -371,7 +367,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NH8T998P7V;
 				INFOPLIST_FILE = MarsHabitatPricePredictor/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -391,7 +387,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COREML_CODEGEN_LANGUAGE = Swift;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NH8T998P7V;
 				INFOPLIST_FILE = MarsHabitatPricePredictor/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

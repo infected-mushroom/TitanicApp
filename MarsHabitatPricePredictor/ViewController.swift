@@ -43,7 +43,7 @@ class ViewController: UIViewController {
             pickerView.delegate = self
             pickerView.dataSource = pickerDataSource
 
-            let features: [Feature] = [.solarPanels, .greenhouses, .size]
+            let features: [Feature] = [.solarPanels, .greenhouses, .size, .sex]
             for feature in features {
                 pickerView.selectRow(2, inComponent: feature.rawValue, animated: false)
             }
