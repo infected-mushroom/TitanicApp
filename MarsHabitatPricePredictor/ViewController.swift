@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     let priceFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
-        formatter.maximumFractionDigits = 0
+        formatter.maximumFractionDigits = 3
         formatter.usesGroupingSeparator = true
         // formatter.locale = Locale(identifier: "en_US")
         return formatter
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             pickerView.delegate = self
             pickerView.dataSource = pickerDataSource
 
-            let features: [Feature] = [.solarPanels, .greenhouses, .size, .age]
+            let features: [Feature] = [.pclass, .embarked, .cabin, .age, .fare, .sex]
             for feature in features {
                 pickerView.selectRow(2, inComponent: feature.rawValue, animated: false)
             }
@@ -68,23 +68,25 @@ class ViewController: UIViewController {
             return pickerView.selectedRow(inComponent: feature.rawValue)
         }
 
-        let solarPanels = pickerDataSource.value(for: selectedRow(for: .solarPanels), feature: .solarPanels)
-        let greenhouses = pickerDataSource.value(for: selectedRow(for: .greenhouses), feature: .greenhouses)
-        let size = pickerDataSource.value(for: selectedRow(for: .size), feature: .size)
-        //let age = pickerDataSource.value(for: selectedRow(for: .size), feature: .size)
+        let pclass = pickerDataSource.value(for: selectedRow(for: .pclass), feature: .pclass)
+        //let embarked = pickerDataSource.value(for: selectedRow(for: .embarked), feature: .embarked)
+        let cabin = pickerDataSource.value(for: selectedRow(for: .cabin), feature: .cabin)
+        let age = pickerDataSource.value(for: selectedRow(for: .age), feature: .age)
+        let fare = pickerDataSource.value(for: selectedRow(for: .fare), feature: .fare)
+        let sex = pickerDataSource.value(for: selectedRow(for: .sex), feature: .sex)
 
         //guard let marsHabitatPricerOutput = try? model.prediction(solarPanels: solarPanels, greenhouses: greenhouses, size: size) else {
             //fatalError("Unexpected runtime error.")
         //}
-        let age = 22.0
-        let fare = 7.2500
-        let pclass = "3"
-        let sex = "male"
+        // let age = 70.0
+        // let fare = 7.2500
+        // let pclass = "3"
+        // let sex = "male"
         let sibsp = "1"
         let parch = "0"
-        let cabin = "NAN"
+        //let cabin = "NAN"
         let embarked = "S"
-        guard let titanicOutput = try? model.prediction(feature_3: age, feature_6: fare, feature_1: pclass, feature_2: sex, feature_4: sibsp, feature_5: parch, feature_7: cabin, feature_8: embarked) else {
+        guard let titanicOutput = try? model.prediction(feature_3: Double(age) as! Double, feature_6: Double(fare) as! Double, feature_1: pclass, feature_2: sex, feature_4: sibsp, feature_5: parch, feature_7: cabin, feature_8: embarked) else {
             fatalError("Unexpected runtime error.")
         }
 

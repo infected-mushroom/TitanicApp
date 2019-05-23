@@ -14,20 +14,25 @@ import UIKit
 class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     // MARK: - Properties
     
-    private let solarPanelsDataSource = SolarPanelDataSource()
-    private let greenhousesDataSource = GreenhousesDataSource()
-    private let sizeDataSource = SizeDataSource()
+    private let pclassDataSource = PClassDataSource()
+    //private let greenhousesDataSource = GreenhousesDataSource()
+    private let cabinDataSource = CabinDataSource()
     private let ageDataSource = AgeDataSource()
+    private let fareDataSource = FareDataSource()
+    private let sexDataSource = SexDataSource()
+    private let embarkedDataSource = EmbarkedDataSource()
     
     // MARK: - Helpers
     
     /// Find the title for the given feature.
     func title(for row: Int, feature: Feature) -> String? {
         switch feature {
-        case .solarPanels:  return solarPanelsDataSource.title(for: row)
-        case .greenhouses:  return greenhousesDataSource.title(for: row)
-        case .size:         return sizeDataSource.title(for: row)
+        case .pclass:  return pclassDataSource.title(for: row)
+        case .embarked:  return embarkedDataSource.title(for: row)
+        case .cabin:         return cabinDataSource.title(for: row)
         case .age:          return ageDataSource.title(for: row)
+        case .fare:         return fareDataSource.title(for: row)
+        case .sex:         return sexDataSource.title(for: row)
         }
     }
     
@@ -36,10 +41,12 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         let value: String?
         
         switch feature {
-        case .solarPanels:      value = solarPanelsDataSource.value(for: row)
-        case .greenhouses:      value = greenhousesDataSource.value(for: row)
-        case .size:             value = sizeDataSource.value(for: row)
+        case .pclass:      value = pclassDataSource.value(for: row)
+        case .embarked:      value = embarkedDataSource.value(for: row)
+        case .cabin:             value = cabinDataSource.value(for: row)
         case .age:              value = ageDataSource.value(for: row)
+        case .fare:             value = fareDataSource.value(for: row)
+        case .sex:              value = sexDataSource.value(for: row)
         }
         
         return value!
@@ -47,18 +54,20 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - UIPickerViewDataSource
     
-    /// Hardcoded 4 items in the picker.
+    /// Hardcoded 6 items in the picker.
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 4
+        return 6
     }
     
     /// Find the count of each column of the picker.
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch Feature(rawValue: component)! {
-        case .solarPanels:  return solarPanelsDataSource.values.count
-        case .greenhouses:  return greenhousesDataSource.values.count
-        case .size:         return sizeDataSource.values.count
+        case .pclass:  return pclassDataSource.values.count
+        case .embarked:  return embarkedDataSource.values.count
+        case .cabin:         return cabinDataSource.values.count
         case .age:          return ageDataSource.values.count
+        case .fare:         return fareDataSource.values.count
+        case .sex:         return sexDataSource.values.count
         }
     }
 }
