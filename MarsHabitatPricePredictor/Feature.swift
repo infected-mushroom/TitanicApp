@@ -13,5 +13,5 @@ import UIKit
      model. So each needs an appropriate `UIPicker` as well.
 */
 enum Feature: Int {
-    case pclass, embarked, cabin, age, fare, sex
+    case pclass, sex, age, fare, cabin, embarked
 }
