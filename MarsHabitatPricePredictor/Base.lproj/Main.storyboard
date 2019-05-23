@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13132" systemVersion="16F65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x5S-qA-b1W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="x5S-qA-b1W">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13114"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Mars Habitat Price Predictor-->
+        <!--Surviving on Titanic Probability Predictor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarsHabitatPricePredictor" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +59,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeV-k7-BYC">
                                 <rect key="frame" x="0.0" y="202" width="375" height="465"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1,123,123.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSc-8r-bnY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,123,123.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSc-8r-bnY">
                                         <rect key="frame" x="0.0" y="55" width="375" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="375" id="XIL-MB-U7N"/>
@@ -68,7 +69,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predicted Price (millions)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXq-xf-a9k">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probability of Survival" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXq-xf-a9k">
                                         <rect key="frame" x="0.0" y="16" width="375" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="38" id="W85-c2-GOk"/>
@@ -113,7 +114,7 @@
                             <constraint firstItem="Q0m-0G-6r1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="z9v-uV-8Fx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Mars Habitat Price Predictor" id="KHj-fv-Iud"/>
+                    <navigationItem key="navigationItem" title="Surviving on Titanic Probability Predictor" id="KHj-fv-Iud"/>
                     <connections>
                         <outlet property="pickerView" destination="I0M-4b-Rzs" id="D11-vg-eL4"/>
                         <outlet property="priceLabel" destination="LSc-8r-bnY" id="SgP-8E-M2U"/>
@@ -128,7 +129,7 @@
             <objects>
                 <navigationController id="x5S-qA-b1W" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="HMA-Ol-BeP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">

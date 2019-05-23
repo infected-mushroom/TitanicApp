@@ -17,6 +17,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     private let solarPanelsDataSource = SolarPanelDataSource()
     private let greenhousesDataSource = GreenhousesDataSource()
     private let sizeDataSource = SizeDataSource()
+    private let sexDataSource = SexDataSource()
     
     // MARK: - Helpers
     
@@ -26,6 +27,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         case .solarPanels:  return solarPanelsDataSource.title(for: row)
         case .greenhouses:  return greenhousesDataSource.title(for: row)
         case .size:         return sizeDataSource.title(for: row)
+        case .sex:          return sexDataSource.title(for: row)
         }
     }
     
@@ -37,6 +39,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         case .solarPanels:      value = solarPanelsDataSource.value(for: row)
         case .greenhouses:      value = greenhousesDataSource.value(for: row)
         case .size:             value = sizeDataSource.value(for: row)
+        case .sex:              value = sexDataSource.value(for: row)
         }
         
         return value!
@@ -55,6 +58,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
         case .solarPanels:  return solarPanelsDataSource.values.count
         case .greenhouses:  return greenhousesDataSource.values.count
         case .size:         return sizeDataSource.values.count
+        case .sex:          return sexDataSource.values.count
         }
     }
 }

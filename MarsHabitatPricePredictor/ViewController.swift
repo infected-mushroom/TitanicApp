@@ -12,7 +12,8 @@ import CoreML
 class ViewController: UIViewController {
     // MARK: - Properties
     
-    let model = MarsHabitatPricer()
+    // let model = MarsHabitatPricer()
+    let model = iris()
     
     /// Data source for the picker.
     let pickerDataSource = PickerDataSource()
@@ -20,10 +21,11 @@ class ViewController: UIViewController {
     /// Formatter for the output.
     let priceFormatter: NumberFormatter = {
         let formatter = NumberFormatter()
-        formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 0
+        // formatter.numberStyle = .currency
+        formatter.numberStyle = .decimal
+        formatter.maximumFractionDigits = 3
         formatter.usesGroupingSeparator = true
-        formatter.locale = Locale(identifier: "en_US")
+        // formatter.locale = Locale(identifier: "en_US")
         return formatter
     }()
     
@@ -63,19 +65,28 @@ class ViewController: UIViewController {
          the user.
     */
     func updatePredictedPrice() {
+        // func selectedRow(for feature: Feature) -> Int {
         func selectedRow(for feature: Feature) -> Int {
             return pickerView.selectedRow(inComponent: feature.rawValue)
         }
 
-        let solarPanels = pickerDataSource.value(for: selectedRow(for: .solarPanels), feature: .solarPanels)
-        let greenhouses = pickerDataSource.value(for: selectedRow(for: .greenhouses), feature: .greenhouses)
-        let size = pickerDataSource.value(for: selectedRow(for: .size), feature: .size)
+        // let solarPanels = pickerDataSource.value(for: selectedRow(for: .solarPanels), feature: .solarPanels)
+        // let greenhouses = pickerDataSource.value(for: selectedRow(for: .greenhouses), feature: .greenhouses)
+        // let size = pickerDataSource.value(for: selectedRow(for: .size), feature: .size)
 
-        guard let marsHabitatPricerOutput = try? model.prediction(solarPanels: solarPanels, greenhouses: greenhouses, size: size) else {
+        //guard let marsHabitatPricerOutput = try? model.prediction(solarPanels: solarPanels, greenhouses: greenhouses, size: size) else {
+            //fatalError("Unexpected runtime error.")
+        //}
+        let sepal_l = 5.1
+        let sepal_w = 3.5
+        let petal_l = 1.4
+        let petal_w = 0.2
+        
+        guard let output = try? model.prediction(input: irisInput(feature_0: sepal_l, feature_1: sepal_w, feature_2: petal_l, feature_3: petal_w)) else {
             fatalError("Unexpected runtime error.")
         }
-
-        let price = marsHabitatPricerOutput.price
-        priceLabel.text = priceFormatter.string(for: price)
+        priceLabel.text = priceFormatter.string(for: output.prediction[0].doubleValue)
+        //let price = marsHabitatPricerOutput.price
+        // priceLabel.text = priceFormatter.string(for: price)
     }
 }
