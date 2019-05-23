@@ -32,8 +32,8 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     /// For the given feature, find the value for the given row.
-    func value(for row: Int, feature: Feature) -> Double {
-        let value: Double?
+    func value(for row: Int, feature: Feature) -> String {
+        let value: String?
         
         switch feature {
         case .solarPanels:      value = solarPanelsDataSource.value(for: row)
@@ -47,7 +47,7 @@ class PickerDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - UIPickerViewDataSource
     
-    /// Hardcoded 3 items in the picker.
+    /// Hardcoded 4 items in the picker.
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 4
     }

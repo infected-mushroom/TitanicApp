@@ -21,6 +21,7 @@
 		5E3FB1781EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5E3FB1771EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel */; };
 		CEB68A492296C95A00E662AC /* titanic_.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A482296C95A00E662AC /* titanic_.mlmodel */; };
 		CEB68A4B2296CC9300E662AC /* AgeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A4A2296CC9300E662AC /* AgeDataSource.swift */; };
+		CEB68A4D2296EA7A00E662AC /* FareDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB68A4C2296EA7A00E662AC /* FareDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		5E3FB1771EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MarsHabitatPricer.mlmodel; sourceTree = "<group>"; };
 		CEB68A482296C95A00E662AC /* titanic_.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = titanic_.mlmodel; sourceTree = "<group>"; };
 		CEB68A4A2296CC9300E662AC /* AgeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeDataSource.swift; sourceTree = "<group>"; };
+		CEB68A4C2296EA7A00E662AC /* FareDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareDataSource.swift; sourceTree = "<group>"; };
 		F8C3E880F8C3E6F000000001 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
 		F8D773F0F8D4A75000000001 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +111,7 @@
 				14A8A1511EB15BF900263F76 /* GreenhousesDataSource.swift */,
 				14A8A1531EB15C0E00263F76 /* SizeDataSource.swift */,
 				CEB68A4A2296CC9300E662AC /* AgeDataSource.swift */,
+				CEB68A4C2296EA7A00E662AC /* FareDataSource.swift */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				141947F31EB2A1F900D03315 /* Feature.swift in Sources */,
 				14A8A1501EB15BE800263F76 /* SolarPanelDataSource.swift in Sources */,
 				14A8A14E1EB15BD500263F76 /* PickerViewDataSource.swift in Sources */,
+				CEB68A4D2296EA7A00E662AC /* FareDataSource.swift in Sources */,
 				5E3FB1781EC63BCF0083E7A8 /* MarsHabitatPricer.mlmodel in Sources */,
 				1405CF381EB15517009DDFA4 /* AppDelegate.swift in Sources */,
 				CEB68A492296C95A00E662AC /* titanic_.mlmodel in Sources */,
